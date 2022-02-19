@@ -1,7 +1,9 @@
 const {Schema, model, Types} = require('mongoose');
+//use moment instead of built in JS date
 const moment = require('moment');
 const reactionSchema = require('./Reaction');
   
+//thoughtSchema model
 const ThoughtSchema = new Schema({
     thoughtText: {
         type: String,
@@ -34,5 +36,6 @@ ThoughtSchema.virtual('reactionCount').get(function () {
 });
   
 const Thought = model('Thought', ThoughtSchema);
-  
+
+//export for global use
 module.exports = Thought;

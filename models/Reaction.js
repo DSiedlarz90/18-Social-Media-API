@@ -1,6 +1,8 @@
 const {Schema, Types} = require('mongoose');
+//use moment instead of JS built in date
 const moment = require('moment');
 
+//reactionSchema model
 const reactionSchema = new Schema({
     //set id to avoid mix up with parent thought id
     reactionId: {
@@ -29,4 +31,5 @@ const reactionSchema = new Schema({
     id: false
 });
 
+//export for global use
 module.exports = reactionSchema;
