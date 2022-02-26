@@ -12,12 +12,8 @@ app.use(express.static('public'));
 app.use(require('./routes'));
 
 //connect to mongoDB
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/18-NoSQL-Social-Network-API', {
-  useFindAndModify: false,
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/socialMedia');
 
-mongoose.set('debug', true);
+// mongoose.set('debug', true);
 
 app.listen(PORT, () => console.log(`🌍 Connected on localhost:${PORT}`));
