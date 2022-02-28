@@ -32,7 +32,9 @@
   * Javascript
   
   ## Demo Video Location
-
+  [Demo Of Users/Friends](https://drive.google.com/file/d/1_kFr9emm5jNYlYstI6pJmC6KJUahRRW2/view)
+  
+  [Demo of Thoughts/Reactions](https://drive.google.com/file/d/1K2JqCeSfgZVQMKy8jcqn8am0rAgw4xj4/view)
 
   ## Github Repo Location
  [https://github.com/DSiedlarz90/18-Social-Media-API](https://github.com/DSiedlarz90/18-Social-Media-API)
