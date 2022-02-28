@@ -76,7 +76,7 @@ const thoughtController = {
         body
     }, res) {
         Thought.findOneAndUpdate({
-                _id: params.thoughtId
+                _id: params.id
             }, {
                 $set: body
             }, {
@@ -101,7 +101,7 @@ const thoughtController = {
         params
     }, res) {
         Thought.findOneAndDelete({
-                _id: params.thoughtId
+                _id: params.id
             })
             .then(deletedThought => {
                 if (!deletedThought) {
@@ -137,7 +137,7 @@ const thoughtController = {
         body
     }, res) {
         Thought.findOneAndUpdate({
-                _id: params.thoughtId
+                _id: params.id
             }, {
                 $push: {
                     reactions: body
@@ -162,7 +162,7 @@ const thoughtController = {
         params
     }, res) {
         Thought.findOneAndUpdate({
-                    _id: params.thoughtId
+                    _id: params.id
                 },
                 {
                     $pull: {

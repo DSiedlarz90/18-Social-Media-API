@@ -16,17 +16,17 @@ router
     .post(addThought);
 
 router
-    .route('/:thoughtId')
+    .route('/:id')
     .get(getThoughtById)
     .put(updateThought)
     .delete(removeThought);
 
 router
-    .route('/:thoughtId/reactions')
+    .route('/:id/reactions')
     .post(addReaction);
 
 router
-    .route('/:thoughtId/reactions/:reactionId')
+    .route('/:id/reactions/:reactionId')
     .delete(removeReaction);
 
 //export for global use

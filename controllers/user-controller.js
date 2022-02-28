@@ -157,12 +157,21 @@ const userController = {
             });
     },
 
-    //delete friend
+    //remove friend
     removefromFriendList({
         params
     }, res) {
-        User.findOneAndDelete({
-                _id: params.thoghtId
+        User.findOneAndUpdate({
+                _id: params.userId
+            },
+            {
+                $pull: {
+                    friends: {
+                        friendId: params.friendId
+                    }
+                }
+            }, {
+                new: true
             })
             .then(deletedFriend => {
                 if (!deletedFriend) {
